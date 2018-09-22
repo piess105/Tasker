@@ -15,7 +15,11 @@ namespace Tasker.Service
             var container = StaticWindsorContainer.Container;
 
             container.Install(
-                FromAssembly.This());
+                FromAssembly.This(),
+                FromAssembly.Named(""),
+                FromAssembly.Named(""),
+                FromAssembly.Named("")
+                );
 
             var service = container.Resolve<MyService>();
 
