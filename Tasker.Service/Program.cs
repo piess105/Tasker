@@ -16,9 +16,9 @@ namespace Tasker.Service
 
             container.Install(
                 FromAssembly.This(),
-                FromAssembly.Named(""),
-                FromAssembly.Named(""),
-                FromAssembly.Named("")
+                FromAssembly.Named("Tasker.AL"),
+                FromAssembly.Named("Tasker.BL"),
+                FromAssembly.Named("Tasker.Data")
                 );
 
             var service = container.Resolve<MyService>();

@@ -9,16 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using Castle.Core.Logging;
 using Microsoft.Owin.Hosting;
+using Tasker.AL.Pub.Managers;
 using Tasker.Service.Properties;
 
 namespace Tasker.Service
 {
     partial class MyService : ServiceBase
     {
+        private IMonitoringManagerAL MonitoringManagerAL { get; }
         private ILogger Logger { get; }
 
-        public MyService(ILogger logger)
+        public MyService(
+            IMonitoringManagerAL monitoringManagerAL,
+            ILogger logger)
         {
+            MonitoringManagerAL = monitoringManagerAL;
             Logger = logger;
             InitializeComponent();
         }
@@ -40,6 +45,8 @@ namespace Tasker.Service
             WebApp.Start(url);
 
             Logger.Info($"Uruchomiono usługe {DateTime.Now}, IP: {url}");
+
+            MonitoringManagerAL.Begin();
         }
     }
 }

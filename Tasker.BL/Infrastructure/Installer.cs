@@ -6,6 +6,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tasker.BL.Factories;
+using Tasker.BL.Managers;
+using Tasker.BL.Providers;
+using Tasker.BL.Pub.Managers;
 
 namespace Tasker.BL.Infrastructure
 {
@@ -15,7 +19,22 @@ namespace Tasker.BL.Infrastructure
         {
             container.Register(
 
+                 Component
+                .For<SheetDataProvider>()
+                .LifeStyle.Transient,
 
+                Component
+                .For<SheetsServiceFactory>()
+                .LifeStyle.Transient,
+
+                Component
+                .For<SheetModelFactory>()
+                .LifeStyle.Transient,
+
+                Component
+                .For<IMonitoringManagerBL>()
+                .ImplementedBy<MonitoringManagerBL>()
+                .LifeStyle.Transient
 
 
                 );
