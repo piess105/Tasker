@@ -23,12 +23,20 @@ namespace Tasker.BL.Infrastructure
                 .For<SheetDataProvider>()
                 .LifeStyle.Transient,
 
+                 Component
+                .For<SheetHeaderModelFactory>()
+                .LifeStyle.Transient,
+
+                 Component
+                .For<SheetCellModelFactory>()
+                .LifeStyle.Transient,
+
                 Component
                 .For<SheetsServiceFactory>()
                 .LifeStyle.Transient,
 
                 Component
-                .For<SheetModelFactory>()
+                .For<SheetRowModelFactory>()
                 .LifeStyle.Transient,
 
                 Component

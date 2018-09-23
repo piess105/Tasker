@@ -46,7 +46,8 @@ namespace Tasker.Service.Infrastructure
 
                         var config = new ConfigurationProvider
                         {
-                           
+                            JsonCredentialPath = path,
+                            SpreedsheetId = "1E8mIiUaQFwrucOF36zIx2PDq4xKVuWGH4did8ltx_Dw",
                         };
 
                         return config;

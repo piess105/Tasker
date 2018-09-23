@@ -9,7 +9,7 @@ namespace Tasker.Models.Pub
     public class SheetCellModel
     {
         public SheetHeaderModel Header { get; set; }
-        public string Position { get; set; }
+        public CellIndexModel CellIndex { get; set; }
         public string Content { get; set; }
     }
 }

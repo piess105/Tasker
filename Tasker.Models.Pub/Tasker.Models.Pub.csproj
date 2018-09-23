@@ -40,10 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CellIndexModel.cs" />
     <Compile Include="SheetCellModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SheetHeaderModel.cs" />
-    <Compile Include="SheetModel.cs" />
+    <Compile Include="SheetRowModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

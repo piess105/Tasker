@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Tasker.Models.Pub
 {
-    public class SheetHeaderModel
+    public class CellIndexModel
     {
-        public string Name { get; set; }
-        public CellIndexModel CellIndex { get; set; }
+        public int Row { get; set; }
+        public int Column { get; set; }
     }
 }

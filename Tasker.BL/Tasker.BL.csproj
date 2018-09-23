@@ -77,7 +77,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factories\SheetModelFactory.cs" />
+    <Compile Include="Extensions\CellIndexModelExtension.cs" />
+    <Compile Include="Extensions\IntExtension.cs" />
+    <Compile Include="Factories\CellIndexModelFactory.cs" />
+    <Compile Include="Factories\SheetCellModelFactory.cs" />
+    <Compile Include="Factories\SheetHeaderModelFactory.cs" />
+    <Compile Include="Factories\SheetRowModelFactory.cs" />
     <Compile Include="Factories\SheetsServiceFactory.cs" />
     <Compile Include="Infrastructure\Installer.cs" />
     <Compile Include="Managers\MonitoringManagerBL.cs" />
