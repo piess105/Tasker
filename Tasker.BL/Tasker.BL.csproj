@@ -88,6 +88,8 @@
     <Compile Include="Managers\MonitoringManagerBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\SheetDataProvider.cs" />
+    <Compile Include="Proxies\SheetDataSaverProxy.cs" />
+    <Compile Include="Savers\SheetDataSaver.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\AdkToolkit\Adk.GoogleApis\Adk.GoogleApis.csproj">
